@@ -92,4 +92,10 @@ describe('Button Component', () => {
     // Should also have the default classes
     expect(button).toHaveClass('btn-primary');
   });
+  
+  // New test for rendering with correct text
+  it('renders with correct text', () => {
+    render(<Button>Click Me</Button>);
+    expect(screen.getByText('Click Me')).toBeInTheDocument();
+  });
 }); 

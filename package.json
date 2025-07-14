@@ -1,0 +1,17 @@
+{
+  "name": "mern-assignment",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "cd client && npm install && cd ../server && npm install",
+    "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
+    "test:unit": "cd client && npm test && cd ../server && npm test",
+    "test:integration": "cd server && npm run test:integration",
+    "test:e2e": "cd client && npx cypress run"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "@testing-library/react": "^14.0.0",
+    "supertest": "^6.3.0",
+    "cypress": "^13.0.0"
+  }
+}
